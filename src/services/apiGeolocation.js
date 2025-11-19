@@ -1,3 +1,15 @@
-import { GEOLOCATION_API_KEY, GEOLOCATION_URL } from "../constants";
+import toast from "react-hot-toast";
+import { GEOLOCATION_URL } from "../constants";
+import axios from "axios";
 
-export function getLocation() {}
+export async function getLocation(ipAddress) {
+    try {
+        const response = await axios(`${GEOLOCATION_URL}&ipAddress=${ipAddress}`);
+        const { data } = response;
+
+        return data;
+    } catch (err) {
+        console.error(err);
+        toast.error(err);
+    }
+}

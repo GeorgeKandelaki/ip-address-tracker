@@ -10,6 +10,10 @@ const Input = styled.input`
     border: none;
     width: 50rem;
     outline: none;
+
+    @media screen and (max-width: 50em) {
+        width: 40rem;
+    }
 `;
 const Button = styled.button`
     position: absolute;
@@ -30,9 +34,9 @@ const Button = styled.button`
     }
 `;
 
-function Search({ search, onChangeSearch, handleSubmit }) {
+function Search({ search, onChangeSearch, onSearch }) {
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={onSearch}>
             <Input
                 value={search}
                 onChange={(e) => onChangeSearch(e.target.value)}
