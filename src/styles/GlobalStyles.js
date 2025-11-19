@@ -2,7 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root{
-        
+        --color-gray-950:hsl(0, 0%, 17%);
+        --color-gray-400:hsl(0, 0%, 58%);
     }
 
     *, *::before, *::after{
@@ -16,13 +17,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        // Weights: 300, 500, 600, 600i, 700
+        /* Weights: 400, 500, 700 */
         font-size: 1.8rem;
-        font-family: "Bricolage Grotesque", sans-serif;
+        font-family: "DM Sans", sans-serif;
         min-height: 100vh;
         background-color: var(--color-neutral-900);
         color: var(--color-neutral-0);
-
     }
 
     input,
