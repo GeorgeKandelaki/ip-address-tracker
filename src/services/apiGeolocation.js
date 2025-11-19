@@ -10,6 +10,6 @@ export async function getLocation(ipAddress) {
         return data;
     } catch (err) {
         console.error(err);
-        toast.error(err);
+        toast.error("Couldn't find a location with that IP!");
     }
 }
